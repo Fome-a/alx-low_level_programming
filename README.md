@@ -1,1 +1,1 @@
-learning c tasks
+README for c 2
