@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * 
+ * @void: no argument 
  * Return: Always 0 (Success)
  */
 
