@@ -5,15 +5,19 @@
  * @c: An input character
  * Return: 1 if c is uppercase or 0 otherwise
  */
-int main (void)
+int _isupper(int c)
 {
-	char chaine [] = "_putchar\n";
-	int i = 0;
+	char uppercase = 'A';
+	int isupper = 0;
 
-	while (chaine[i])
+	for (; uppercase <= 'Z'; uppercase++)
 	{
-		_putchar(chaine[i]);
-		i++;
+		if (c == uppercase)
+		{	
+			isupper = 1;
+			break;
+		}
 	}
-	return (0);
+
+	return (isupper);
 }
