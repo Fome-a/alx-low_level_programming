@@ -11,8 +11,8 @@ int main(void)
 	int e;
 	int i;
 
-	int e = '0'
-	int i = '0'
+	e = '0'
+	i = '0'
 
 	while (e < '9')
 	{
