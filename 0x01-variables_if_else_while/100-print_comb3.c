@@ -23,7 +23,7 @@ int main(void)
 			{
 				putchar(e);
 				putchar(i);
-				if (i == '8' && e == '9')
+				if (i == '9' && e == '8')
 				{
 					break;
 				}
