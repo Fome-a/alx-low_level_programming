@@ -11,12 +11,12 @@ int main(void)
 	int e;
 	int i;
 
-	e = '0'
-	i = '0'
+	e = '0';
+	i = '0';
 
 	while (e < '9')
 	{
-		i = '0'
+		i = '0';
 		while (i <= '9')
 		{
 			if (e != i && e < i)
