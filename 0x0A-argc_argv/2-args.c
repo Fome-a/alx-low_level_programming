@@ -1,12 +1,12 @@
 #include<stdio.h>
 
 /**
- * * main - function
- * *
- * * @argv: the chaine of chaine
- * * @argc: the int
- * * Return: Always 0.
- * */
+ * main - function
+ *
+ * @argv: the chaine of chaine
+ * @argc: the int
+ * Return: Always 0.
+ */
 
 int main(int argc, char **argv)
 {
