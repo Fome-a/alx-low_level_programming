@@ -8,14 +8,14 @@ include "main.h"
 int _isupper(int c)
 {
 	char i = 'A';
-	int _isupper = 0;
+	int isupper = 0;
 
 	while (i <= 'Z')
 	{
 		if (c == i)
-			_isupper = 1;
+			isupper = 1;
 		i++;
 	}
 
-	return (_isupper);
+	return (isupper);
 }
