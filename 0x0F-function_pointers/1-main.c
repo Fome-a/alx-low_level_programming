@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "function_pointers.h"
+nclude "function_pointers.h"
 
 /**
  * print_elem - prints an integer
