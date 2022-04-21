@@ -1,29 +1,44 @@
+#include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+
 /**
- * add_node - adds a new node at the beginning
- * of a list_t list.
- * @head: head of the linked list.
- * @str: string to store in the list.
- * Return: address of the head.
+ * _strlen_recursion - function
+ *
+ * @s: the chaine
+ * Return: Always 0.
+ */
+
+int _strlen_recursion(const char *s)
+{
+
+	if (*s == '\0')
+		return (0);
+	else
+		return (1 + _strlen_recursion(s + 1));
+}
+
+/**
+ * add_node - a function ...
+ * @head: the list
+ * @str: the chaine
+ *
+ * Return: 1 or 0
  */
 
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	size_t nchar;
 
-	new = malloc(sizeof(list_t));
+	new =  malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
 
 	new->str = strdup(str);
-
-	for (nchar = 0; str[nchar]; nchar++)
-		;
-
-	new->len = nchar;
+	new->len = _strlen_recursion(str);
 	new->next = *head;
 	*head = new;
 
-	return (*head);
+	return (new);
 }
