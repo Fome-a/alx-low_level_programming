@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-int main(int argc, int **argv[])
+int main(void)
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", __FILE__);
 	return (0);
 }
