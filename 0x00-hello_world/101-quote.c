@@ -15,7 +15,7 @@ int main(void)
 	for (i = 0; i < 59; i++)
 	{
 		putchar(ch[i]);
-		putchar('\n');
 	}
+	putchar('\n');
 	return (1);
 }
