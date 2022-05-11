@@ -1,0 +1,36 @@
+nt m;
+    int a;
+    int b;
+
+    for(m = 0; m <= 9; m++)
+    {
+        for(a = 0; a <= 9; a++)
+        {
+            b = a * m;
+
+            if(b == 0)
+                putchar(b + '0');
+
+            else if(b <= 9)
+            {
+                putchar(',');
+                putchar(' ');
+                putchar(' ');
+                putchar(b + '0');
+            }
+            if(b > 9)
+            {
+                putchar(',');
+                putchar(' ');
+                putchar((b / 10) + '0');
+                putchar((b % 10) + '0');
+            
+                
+                
+            }
+            
+        }
+        putchar('\n');
+    }
+    return(0);
+}
