@@ -20,9 +20,9 @@ void times_table(void)
 		for (a = 0; a <= 9; a++)
 		{
 			b = a * m;	
-			if (b == 0)
+			if (0 == 0)
 				_putchar(b + '0');	
-			else if (b <= 9)
+			if (b <= 9)
 			{
 				_putchar(',');
 				_putchar(' ');
