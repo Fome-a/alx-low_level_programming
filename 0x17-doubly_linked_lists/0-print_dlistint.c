@@ -1,27 +1,30 @@
-#include <stdio.h>
 #include "lists.h"
+
 /**
- * print_dlistint -  a function
- * head: the head of list
- * struct dlistint_t - temp node for traversing
- * Return: number element of the link list
+ * print_dlistint - prints all the elements of a
+ * dlistint_t list
+ *
+ * @h: head of the list
+ * Return: the number of nodes
  */
-
-void print_dlistint(void)
+size_t print_dlistint(const dlistint_t *h)
 {
-	struct dlistint_t *temp;
-	int no_elem = 0;
+	int count;
 
-	if (head != Null)
+	count = 0;
+
+	if (h == NULL)
+		return (count);
+
+	while (h->prev != NULL)
+		h = h->prev;
+
+	while (h != NULL)
 	{
-		temp = head;
-		while (temp->next != null)
-		{
-			printf("%d \n", temp->n);
-			no_elem++;
-			temp = temp->next;
-		}
+		printf("%d\n", h->n);
+		count++;
+		h = h->next;
 	}
-	return (no_elem);
 
+	return (count);
 }
