@@ -1,20 +1,44 @@
+#include "main.h"
+#include <stdio.h>
+
 /**
-* _atoi - changes a string to an int
-* @s: the string to be changed
-*
-* Return: the converted int
-*/
+ * _atoi - xonvert to integer
+ * @s: poiter to string
+ * Return: integer
+ */
 int _atoi(char *s)
 {
-int i = 1;
-unsigned int num = 0;
-do {
-if (*s == '-')
-i *= -1;
-else if (*s >= '0' && *s <= '9')
-num = num * 10 + (*s - '0');
-else if (num > 0)
-break;
-} while (*s++);
-return (num *i);
+	unsigned int i = 0, z = 0, p = 0;
+	unsigned int h = 1, w = 1, n;
+
+	while (s[i])
+	{
+		if (z > 0 && (s[i] < '0' || s[i] > '9'))
+		{
+			break;
+		}
+
+		if (s[i] == '-')
+		{
+			h *= -1;
+		}
+
+		if ((s[i] >= '0') && (s[i] <= '9'))
+		{
+			if (z > 0)
+			{
+				w *= 10;
+			}
+			z++;
+		}
+		i++;
+	}
+
+	for (n = i - z; n < i; n++)
+	{
+		p = p + ((s[n] - 48) * w);
+		w /= 10;
+	}
+
+	return (p * h);
 }
