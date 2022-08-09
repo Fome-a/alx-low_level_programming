@@ -1,4 +1,4 @@
-i#include "hash_tables.h"
+#include "hash_tables.h"
 
 /**
  * free_list - Free list.
