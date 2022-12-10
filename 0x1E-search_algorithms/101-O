@@ -1,2 +1,1 @@
-/**the time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)*/
 O(sqrt(n))
